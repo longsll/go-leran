@@ -19,8 +19,6 @@ func main() {
 
 
 
-
-
 	mapInfo := map[string]int32{
 		"roy":18,
 		"kitty":16,
