@@ -23,6 +23,16 @@ type Person struct {
 // 	return a[i].Price < a[j].Price
 // }
 
+func sortMapByKey(m map[int]int) {
+    keys := make([]int, 0, len(m))
+    for k := range m {
+        keys = append(keys, k)
+    }
+    sort.Ints(keys)
+    for _, k := range keys {
+        fmt.Printf("%d:%d\n", k, m[k])
+    }
+}
 
 func main() {
 
@@ -45,4 +55,11 @@ func main() {
 		return a[i] > a[j]
 	})
 	fmt.Println(a)
+
+	//mapsort
+	scene := make(map[int]int)
+	scene[6] = 66
+	scene[3] = 4
+	scene[9] = 960
+	sortMapByKey(scene)
 }
