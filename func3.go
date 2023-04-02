@@ -8,7 +8,7 @@ func fn() {
 	defer func () {
 		err := recover()
 		if err != nil {
-			fmt.Println("err")
+			fmt.Println("err",err)
 		}
 	}()
 	panic("抛出异常")
