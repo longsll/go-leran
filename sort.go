@@ -62,4 +62,10 @@ func main() {
 	scene[3] = 4
 	scene[9] = 960
 	sortMapByKey(scene)
+
+	//该函数使用二分查找的方法，会从[0, n)中取出一个值index，index为[0, n)中最小的使函数f(index)为True的值
+	//并且f(index+1)也为True。如果无法找到该index值，则该方法为返回n。
+	aa := []int{1,2,3,4,5}
+    d := sort.Search(len(aa), func(i int) bool { return aa[i]>3 })
+    fmt.Println(d)
 }
